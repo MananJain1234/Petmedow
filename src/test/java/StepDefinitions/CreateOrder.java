@@ -28,6 +28,7 @@ Actions a = new Actions(driver);
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
 		WebDriverManager.chromedriver().setup();
+		
 //      ChromeOptions option = new ChromeOptions();
 		driver.get("https://pet-meadow-staging.herokuapp.com/");
 		driver.manage().window().maximize();
@@ -52,6 +53,9 @@ Actions a = new Actions(driver);
 		 driver.findElement(By.xpath("//a[text()='Service']")).click();
 	    
 	}
+
+	
+	
 
 	@When("user selects the hospital {string}")
 	public void user_selects_the_hospital(String hospital) throws InterruptedException {
